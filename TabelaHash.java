@@ -144,7 +144,7 @@ public class TabelaHash {
     private void redimensionar() {
         Entrada[] antiga = tabela;
         quantRedimensionamento++;
-        criarTabela(proximoPrimo(capacidade + 1));      // antes: proximoPrimo(2 * capacidade)
+        criarTabela(proximoPrimo(2*capacidade));      // antes: proximoPrimo(1+ capacidade)
 
         for (Entrada e : antiga) {
             if (e.estado == OCUPADO) colocar(e.estudante, false);
